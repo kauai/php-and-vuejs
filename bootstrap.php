@@ -1,5 +1,5 @@
 <?php
-
+require __DIR__.'/connection.php';
 // $response = [];
 // if($_SERVER['REQUEST_METHOD'] === 'POST'){
 //     //salvar dados

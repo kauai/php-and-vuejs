@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vue Js</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <script>
-          fetch('/api.php')
-          .then(item => 
-               item.json()
-          ).then(response => 
-               console.log(response)
-          )
+      // const promise = fetch('./api.php',{method:'POST'})
+      const promise = fetch("./api.php?id=3");
+
+      promise.then(async item => {
+        const data = await item.json();
+            if (item.status == 422) {
+                console.log(data.msg);
+            } else {
+                console.log(data);
+            }
+      });
     </script>
-</body>
+  </body>
 </html>
