@@ -11,6 +11,7 @@ if(!$email || !$name){
     $response = [
         "msg" => "Preencha todos os campos!!!"
     ];
+    var_dump($name,$email);
     return $response;
 }
 

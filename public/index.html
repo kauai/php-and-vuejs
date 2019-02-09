@@ -4,21 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Vue Js</title>
   </head>
   <body>
-    <script>
-      // const promise = fetch('./api.php',{method:'POST'})
-      const promise = fetch("./api.php?id=3");
+    <div id="app">carregando!!!</div>
 
-      promise.then(async item => {
-        const data = await item.json();
-            if (item.status == 422) {
-                console.log(data.msg);
-            } else {
-                console.log(data);
-            }
-      });
-    </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.3/vue.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>
